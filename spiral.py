@@ -38,15 +38,20 @@ hold()
 # renderers work on a new plot, and not the last one.
 figure()
 
+#  = golden*np.cos(theta)
+# golden_y = golden*np.sin(theta)
+#  = lituus*np.cos(theta)
+# lituus_y = lituus*np.sin(theta)
+
+line(golden_x, golden_y, color="black", line_width=2,
+     title="GoldenRatio", legend="GoldenRatio")
+line(lituus_x, lituus_y, color="green", line_width=2,
+     title="Lituus", legend="Lituus")
 line(arch_x, arch_y, color="red", line_width=2,
      title="Archimean", legend="Archimedean")
-
-line(fermat_x, fermat_y, color="blue", line_width=1,
+line(fermat_x, fermat_y, color="blue", line_width=2,
      title="Fermat", legend="Fermat")
 
-
-# EXERCISE: add all four spirals to one plot, each with different line colors
-# and legend values. NOTE: title only set on the first renderer.
 
 # OK, so that doesn't look so good because Bokeh tried to autoscale to
 # accomodate all the data. We can use the Range1d object to set the plot range
