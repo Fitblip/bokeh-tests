@@ -28,13 +28,7 @@ output_file("lines.html")
 
 # Plot the Archimedean spiral using the `line` renderer. Note how we set the
 # color, line thickness, title, and legend value.
-# line(arch_x, arch_y, color="red", line_width=2,
-#      title="Archimean", legend="Archimedean")
 
-line(fermat_x, fermat_y, color="blue", line_width=1,
-     title="Fermat", legend="Fermat")
-
-# EXERCISE: reproduce the above plot for one of the other spirals
 
 # Let's try to put all lines on one plot for comparison. First we need to
 # turn on `hold` so that each renderer does not create a brand new plot
@@ -43,6 +37,13 @@ hold()
 # Next we need to actually create a new figure, so that the following
 # renderers work on a new plot, and not the last one.
 figure()
+
+line(arch_x, arch_y, color="red", line_width=2,
+     title="Archimean", legend="Archimedean")
+
+line(fermat_x, fermat_y, color="blue", line_width=1,
+     title="Fermat", legend="Fermat")
+
 
 # EXERCISE: add all four spirals to one plot, each with different line colors
 # and legend values. NOTE: title only set on the first renderer.
