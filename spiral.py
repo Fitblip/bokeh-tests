@@ -53,12 +53,22 @@ line(arch_x, arch_y, color="red", line_width=2,
 line(fermat_x, fermat_y, color="blue", line_width=2,
      title="Fermat", legend="Fermat")
 
+plot = curplot()
+plot.y_range = Range1d(start=-10, end=10)
+plot.x_range = Range1d(start=-10, end=10)
 
 # OK, so that doesn't look so good because Bokeh tried to autoscale to
 # accomodate all the data. We can use the Range1d object to set the plot range
 # explicitly
 
 # EXERCISE: create a new figure
+figure()
+
+line(golden_x, golden_y, color="black", line_width=2,
+     title="GoldenRatio", legend="GoldenRatio",
+     x_range=Range1d(start=0, end=10),
+     y_range=Range1d(start=0, end=10)
+)
 
 # EXERCISE: add x_range and y_range parameters to the first `line`, to set the
 # range to [-10, 10]. NOTE: Range1d are created like: Range1d(start=0, end-10)
