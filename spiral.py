@@ -11,6 +11,7 @@ theta = np.linspace(0, 8*np.pi, 10000)[1:]
 lituus = theta**(-1/2)          # lituus
 golden = np.exp(0.306349*theta) # golden
 arch   = theta                  # Archimedean
+# Ahw I love fermat's little theorm!
 fermat = theta**(1/2)           # Fermat's
 
 # Now compute the X and Y coordinates (polar mappers planned for Bokeh later)
