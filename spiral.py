@@ -31,8 +31,8 @@ output_file("lines.html")
 # line(arch_x, arch_y, color="red", line_width=2,
 #      title="Archimean", legend="Archimedean")
 
-line(arch_x, arch_y, color="red", line_width=2,
-     title="Archimean", legend="Archimedean")
+line(fermat_x, fermat_y, color="blue", line_width=1,
+     title="Fermat", legend="Fermat")
 
 # EXERCISE: reproduce the above plot for one of the other spirals
 
